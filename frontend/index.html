@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <nav>
+        <div id="part1">
+            <div class="part1_div" id="med">
+                <a href="./index.html"><img src="https://www.1mg.com/images/tata_1mg_logo.svg" alt="img"></a>
+                <a href="#">MEDICINES</a>
+                <a href="#">LAB TESTS <button>SAFE</button></a>
+                <a href="#">CONSULT DOCTORS</a>
+                <a href="#">CANCER CARE</a>
+                <a href="#">AYURVEDA</a>
+                <a href="#">CARE PLANE <button>SAVE MORE</button></a>
+            </div>
+            <div class="part1_div" id="signup">
+                <a href="#">Log In</a>
+                <a href="#">Sign Up</a>
+                <a href="#"><i class="fa fa-shopping-cart" style="font-size:36px"></i></a>
+            </div>
+            <div class="part1_div" id="needhelp">
+                <a href="#">Need Help ?</a>
+            </div>
+
+        </div>
+        <div id="part2">
+            <div id="part2_div1">
+                <form><input type="text" placeholder="enter location"></form>
+                <form><input type="text" placeholder=" search"></form>
+            </div>
+            <div id="part2_div2">
+                <p>QUICK BUY! Get 15% off on <br> medicines*</p>
+                <button>Quick Order</button>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <div id="drop">
+                    <div class="a1">
+                        <a href="#">
+                            <h3>Vitamins and Supplements</h3>
+                        </a>
+                        <a href="#">Multivitamins</a>
+                        <a href="#">Vitamins A-Z</a>
+                        <a href="#">Mineral Supplements</a>
+                        <a href="#">Vitamin B-12</a>
+                        <a href="#">
+                            <h3>Nutritional Drinks</h3>
+                        </a>
+                        <a href="#">Adult Daily Nutrition</a>
+                        <a href="#">Kids Nutrition (2-15 Yrs)</a>
+                        <a href="#">Women Nutrition</a>
+                        <a href="#">
+                            <h3>Healthy Snacks & Drinks</h3>
+                        </a>
+                        <a href="#">Green Tea & Herbal Tea</a>
+                        <a href="#">Apple Cider Vinegar</a>
+                        <a href="#">Energy Foods</a>
+                    </div>
+                    <div class="a2">
+                        <a href="#">
+                            <h3>Protein Supplements</h3>
+                        </a>
+                        <a href="#">Whey Protein</a>
+                        <a href="#">Amino Acids</a>
+                        <a href="#">Mass Gainers</a>
+                        <a href="#">Workout Essential</a>
+                        <a href="#">Fat Burners</a>
+                        <a href="#">
+                            <h3>Omega & Fish Oil</h3>
+                        </a>
+                        <a href="#">Fish Oil</a>
+                        <a href="#">Cod Liver Oil</a>
+                        <a href="#">Flax Seed Oil</a>
+                        <a href="#">
+                            <h3>Immunity Boosters</h3>
+                        </a>
+                        <a href="#">Chyawanprasha</a>
+                        <a href="#">Vitamin C</a>
+                        <a href="#">Herbal Teas</a>
+                        <a href="#">Antioxidant Supplements</a>
+                        <a href="#">Ayurvedic Supplements</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+<script>
+    var dropdownBtn = document.getElementsByClassName("dropbtn")[0];
+
+    // When the user clicks on the button, toggle between hiding/showing the dropdown content
+    dropdownBtn.addEventListener("click", function () {
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+        } else {
+            dropdownContent.style.display = "block";
+        }
+    });
+</script>
+
+</html>

@@ -1,7 +1,10 @@
 const { Router } = require("express");
 const { ProductModel } = require("../models/Product.model");
+const {productAuth} = require("../middleware/productauth.middleware");
 
 const productRouter = Router();
+
+productRouter.use(productAuth);
 
 productRouter.get("/", async (req, res) => {
     try {

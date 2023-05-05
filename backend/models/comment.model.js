@@ -1,11 +1,9 @@
 const mongoose = require("mongoose");
 
 const commentSchema = mongoose.Schema({
-    rating: Number,
+    rating: {type:Number,max:[5,"rating can't be more than 5"],min:[0,"rating can't be less than 0"]},
     comment: String,
-    user: { type: String, required: true },
     userID: { type: String, required: true },
-    product: { type: String, required: true },
     productID: { type: String, required: true }
 })
 

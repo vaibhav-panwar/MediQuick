@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const validator = require("validator")
 
 let userSchema = mongoose.Schema({
     name: { type: String, required: [true, 'name field is empty'] },
@@ -7,14 +6,10 @@ let userSchema = mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        lowercase: true,
-        validate(value) {
-            if (!validator.isEmail(value)) {
-                throw new Error("this email already exists")
-            }
-        }
+        lowercase: true
     },
-    password: { type: String, required: [true, 'password field is empty'] }
+    password: { type: String, required: [true, 'password field is empty'] },
+    isAdmin:{type:Boolean , default:false , required:true}
 }, {
     versionKey: false,
     timestamps: true

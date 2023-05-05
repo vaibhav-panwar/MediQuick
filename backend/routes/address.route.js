@@ -1,7 +1,9 @@
 const {Router} = require("express");
+const {auth} = require("../middleware/auth.middleware");
 const {AddressModel}= require("../models/address.model");
 
 const addressRouter = Router();
+addressRouter.use(auth);
 
 addressRouter.get("/",async(req,res)=>{
    try {
@@ -13,7 +15,7 @@ addressRouter.get("/",async(req,res)=>{
    }
 })
 
-addressRouter.post("/",async(req,res)=>{
+addressRouter.post("/add",async(req,res)=>{
     try {
         let data = new AddressModel(req.body);
         await data.save();
@@ -44,7 +46,7 @@ addressRouter.delete("/delete/:id", async (req, res) => {
     try {
         let data = await AddressModel.findById(id);
         if (data.userID == req.body.userID) {
-            await AddressModel.findByIdAndDelete(id, req.body);
+            await AddressModel.findByIdAndDelete(id);
             res.send({ "msg": "delete successfull" });
         }
         else {
@@ -54,3 +56,5 @@ addressRouter.delete("/delete/:id", async (req, res) => {
         res.status(400).send({ "msg": error.message })
     }
 })
+
+module.exports = {addressRouter};

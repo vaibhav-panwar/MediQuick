@@ -4,12 +4,7 @@ const productSchema = mongoose.Schema({
     title: {
         type: String,
         required: [true, 'title field is empty'],
-        unique: true,
-        validate(value) {
-            if (!validator.isEmail(value)) {
-                throw new Error("this email already exists")
-            }
-        }
+        unique: true
     },
     img: {
         type: String,
@@ -37,7 +32,6 @@ const productSchema = mongoose.Schema({
     },
     healthConcerns: {
         type: String,
-        required: [true, 'health concern field is empty']
     },
     gender: {
         type: String,
@@ -46,6 +40,8 @@ const productSchema = mongoose.Schema({
     tags: {
         type: [String]
     }
+},{
+    versionKey:false
 })
 
 const ProductModel = mongoose.model("product", productSchema);
