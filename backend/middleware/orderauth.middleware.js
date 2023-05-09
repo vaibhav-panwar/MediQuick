@@ -6,7 +6,7 @@ const ordertAuth = (req, res, next) => {
         if (check) {
             let token = check.split(" ")[1];
             if (token) {
-                const decoded = jwt.verify(token, 'adminkey') || jwt.verify(token, 'pvtkey');
+                const decoded = jwt.verify(token, 'pvtkey') || jwt.verify(token, 'adminkey') ;
                 if (decoded) {
                     req.body.userID = decoded.userID;
                     next();

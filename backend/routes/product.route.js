@@ -1,15 +1,15 @@
 const { Router } = require("express");
-const { ProductModel } = require("../models/Product.model");
+const { ProductModel } = require("../models/product.model");
 const {productAuth} = require("../middleware/productauth.middleware");
 
-const productRouter = Router();
 
-productRouter.use(productAuth);
+const productRouter = Router();
+// productRouter.use(productAuth);
 
 productRouter.get("/", async (req, res) => {
     try {
-        const page = parseInt(req.query.page) || 1; // default to page 1
-        const limit = parseInt(req.query.limit) || 10; // default to limit of 10 products per page
+        const page = parseInt(req.query.page) || {}; // default to page 1
+        const limit = parseInt(req.query.limit) || {}; // default to limit of 10 products per page
         const skipIndex = (page - 1) * limit;
         const searchQuery = {};
         const sortField = {};
@@ -29,12 +29,21 @@ productRouter.get("/", async (req, res) => {
         if (req.query.title) {
             searchQuery.title = { $regex: req.query.title, $options: 'i' };
         }
-
+        const data = await ProductModel.find(searchQuery);
         const products = await ProductModel.find(searchQuery).sort(sortField).skip(skipIndex).limit(limit);
-        res.status(200).json(products);
+        res.set({
+            'X-Total-Count' :data.length,
+            'Access-Control-Expose-Headers':'X-Total-Count'
+        })
+        res.status(200).send(products);
     } catch (err) {
-        res.status(500).json({ message: err.message });
+        res.status(500).send({ message: err.message });
     }
+})
+productRouter.get("/:id",async(req,res)=>{
+    let {id} = req.params;
+    let data = await ProductModel.findById(id);
+    res.status(200).send(data);
 })
 
 productRouter.post("/add", async (req, res) => {

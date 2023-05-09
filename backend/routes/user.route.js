@@ -9,9 +9,9 @@ userRouter.use(unique);
 
 userRouter.post("/register", async (req, res) => {
     try {
-        let { name, email, age, password } = req.body;
+        let { name, email,  password } = req.body;
         bcrypt.hash(password, 4, async function (err, hash) {
-            let user = new UserModel({ name, email, age, password: hash });
+            let user = new UserModel({ name, email, password: hash });
             await user.save();
             res.status(200).send({ "msg": "new user created", "data": user });
         });
@@ -24,7 +24,7 @@ userRouter.post("/login", async (req, res) => {
     let { email, password } = req.body;
     let user = await UserModel.findOne({ email });
     if (user) {
-        let a = bcrypt.compareSync(password, user.password);
+        let a = bcrypt.compareSync(password,user.password);
         if(a){
             const token = jwt.sign({userID:user._id,user:user.name}, 'pvtkey');
             res.status(200).send({"msg":"login successfull","token":token,"user":user.name});
