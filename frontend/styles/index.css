@@ -140,7 +140,8 @@
     font-weight: 500;
 }
 
-#products1,#products2 {
+#products1,
+#products2 {
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -179,3 +180,5 @@
     margin-top: 5px;
     font-size: 20px;
 }
+
+
