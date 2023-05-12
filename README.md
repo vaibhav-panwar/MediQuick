@@ -1,6 +1,5 @@
 # fluffy-cave-1088
 Project Name
-A brief description of your project, its purpose, and what it aims to achieve. For example:
 
 "Tata1mg Clone is a web application built using HTML, CSS, JavaScript, Node.js, Express, and MongoDB. The application aims to replicate the functionality and user experience of the popular online pharmacy website, Tata1mg.com. The project was created as a learning exercise to practice building a full-stack web application with a modern tech stack."
 
