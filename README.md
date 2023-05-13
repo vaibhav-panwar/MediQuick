@@ -34,7 +34,7 @@ List the main features of the application:
 
 ## Screenshots
 
-![App Screenshot](https://drive.google.com/file/d/14Q727unSDQLFdBF5zBnYKPuK-FyLw-gV/view?usp=sharing)
+![App Screenshot](./ss/1.png)
 
 ![App Screenshot](https://drive.google.com/file/d/1OdkvZvnPCn2ms92-t62cy-DU0X6APZv4/view?usp=sharing)
 
