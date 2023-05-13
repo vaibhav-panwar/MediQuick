@@ -32,8 +32,6 @@ List the main features of the application:
 3. Add products to cart and checkout
 4. View and manage orders
 
-## Screenshots
 
-![App Screenshot]("./ss/1.PNG")
 
 
