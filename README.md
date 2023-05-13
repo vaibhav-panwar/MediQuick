@@ -1,32 +1,40 @@
-# fluffy-cave-1088
-Project Name
 
-"Tata1mg Clone is a web application built using HTML, CSS, JavaScript, Node.js, Express, and MongoDB. The application aims to replicate the functionality and user experience of the popular online pharmacy website, Tata1mg.com. The project was created as a learning exercise to practice building a full-stack web application with a modern tech stack."
+# Medi Quick
+Medi Quick is a web application built using HTML, CSS, JavaScript, Node.js, Express, and MongoDB. The application aims to replicate the functionality and user experience of the popular online pharmacy website, Tata1mg.com. The project was created as a learning exercise to practice building a full-stack web application with a modern tech stack. 
 
-Installation and Setup
-This section should include instructions for installing and running the project on a local machine. For example:
 
-Clone the repository to your local machine using git clone https://github.com/your-username/your-repo.git
-Install the necessary dependencies by running npm install in the project directory
-Start the development server using npm start
-Open your web browser and navigate to http://localhost:3000 to view the application
-Tech Stack
-List the technologies and tools used in the project. For example:
+## Demo
 
+https://cute-quokka-bf4c05.netlify.app/
+
+
+## Tech Stack
+List the technologies and tools used in the project:
 HTML
-CSS
-JavaScript
-Node.js
-Express
-MongoDB
-Features
-List the main features of the application. For example:
 
-User registration and login
-Browse and search for products
-Add products to cart and checkout
-View and manage orders
-Admin dashboard to manage products, orders, and users
-Screenshots
-Include some screenshots of your project, so that users can get a quick visual overview of what the application looks like. For example:
+CSS
+
+JavaScript 
+
+Node.js 
+
+Express 
+
+MongoDB
+
+
+## Features
+
+List the main features of the application:
+
+1. User registration and login
+2. Browse and search for products
+3. Add products to cart and checkout
+4. View and manage orders
+
+## Screenshots
+
+![App Screenshot](https://drive.google.com/file/d/14Q727unSDQLFdBF5zBnYKPuK-FyLw-gV/view?usp=sharing)
+
+![App Screenshot](https://drive.google.com/file/d/1OdkvZvnPCn2ms92-t62cy-DU0X6APZv4/view?usp=sharing)
 
