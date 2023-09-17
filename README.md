@@ -5,7 +5,7 @@ Medi Quick is a web application built using HTML, CSS, JavaScript, Node.js, Expr
 
 ## Demo
 
-https://cute-quokka-bf4c05.netlify.app/
+https://medi-quick.netlify.app/
 
 
 ## Tech Stack
